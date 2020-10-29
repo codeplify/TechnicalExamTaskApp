@@ -7,12 +7,9 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.button.MaterialButton
-import com.google.android.material.textview.MaterialTextView
 import kotlinx.android.synthetic.main.task_list_item.view.*
 import net.decenternet.technicalexam.R
 import net.decenternet.technicalexam.data.TaskListener
-import net.decenternet.technicalexam.domain.Task
 import net.decenternet.technicalexam.model.Task2
 
 class TaskListAdapter(private val tasks:List<Task2>) : RecyclerView.Adapter<TaskListAdapter.ViewHolder>(){
@@ -52,15 +49,17 @@ class TaskListAdapter(private val tasks:List<Task2>) : RecyclerView.Adapter<Task
 
         p0.taskId.text = "Task No. " + item.id.toString()
 
-
-
-
-
-        p0.taskDescription.text = item.description
-
         if(item.isCompleted == 1){
             p0.taskDescription.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
+            p0.taskDescription.text = item.description
+        }else{
+            p0.taskDescription.paintFlags = p0.taskDescription.paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
+            p0.taskDescription.text = item.description
         }
+
+
+
+
     }
 
 }

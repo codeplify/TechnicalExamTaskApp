@@ -116,7 +116,7 @@ public class TasksActivity extends AppCompatActivity  implements TasksContract.V
 
         tvTitle.setText(title);
 
-        alertDialogBuilder.setCancelable(false).setPositiveButton( isEditOrDelete == true ? "update":"save", new DialogInterface.OnClickListener() {
+        alertDialogBuilder.setCancelable(false).setPositiveButton( task == null ? "Save":"Update", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Random random = new Random();
