@@ -5,12 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import net.decenternet.technicalexam.R;
-import net.decenternet.technicalexam.commontools.Reminder;
 import net.decenternet.technicalexam.ui.tasks.TasksActivity;
 
 import java.util.Timer;
