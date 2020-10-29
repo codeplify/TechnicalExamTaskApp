@@ -23,7 +23,7 @@ abstract class TaskRoomDB : RoomDatabase(){
             INSTANCE?.let {
                 database ->
                 scope.launch {
-                    var stockDao = database.taskDao()
+                    var taskDao = database.taskDao()
                 }
             }
         }

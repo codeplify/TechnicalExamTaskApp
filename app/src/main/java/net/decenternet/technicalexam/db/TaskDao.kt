@@ -20,7 +20,7 @@ interface TaskDao {
     fun getCountTask():Int
 
     @Delete
-    suspend fun deleteTask(vararg stock: Task2)
+    suspend fun deleteTask(vararg task: Task2)
 
     @Update
     suspend fun updateTask(vararg task: Task2)
